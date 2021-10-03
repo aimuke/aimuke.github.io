@@ -1,0 +1,16 @@
+{% assign tmp = page.path | split: "/" %}
+{% assign bname = tmp[1] %}
+{% assign path = page.path | remove: "_" | remove: ".md" | prepend: "/"  %}
+
+<div class="content-wrap">
+    <div>
+        <h1>目录</h1>
+    </div>
+
+    <div class="conent">
+        {% for ct in site.data.books[bname].content %}
+            {% include _partial/content_item.html item=ct level=1 %}
+        {% endfor %}
+    </div>
+
+</div>

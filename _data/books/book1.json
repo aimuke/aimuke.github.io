@@ -1,0 +1,34 @@
+{
+    "name": "book1",
+    "path": "/books/book1/",
+    "content": [
+        {
+            "name": "1第一章",
+            "path": "/books/book1",
+            "children": [
+                {
+                    "name": "第一节",
+                    "path": "/books/book1/2019-10-16-c1/"
+                },
+                {
+                    "name": "第二节",
+                    "path": "/books/book1/2019-10-16-c2/"
+                }
+            ]
+        },
+        {
+            "name": "1第二章",
+            "path": "/books/book1",
+            "children": [
+                {
+                    "name": "第一节",
+                    "path": "/books/book1/2019-10-16-c1/"
+                },
+                {
+                    "name": "第二节",
+                    "path": "/books/book1/2019-10-16-c2/"
+                }
+            ]
+        }
+    ]
+}

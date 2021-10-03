@@ -1,0 +1,12 @@
+---
+layout: default
+title: jekyll guide list
+category: guide
+---
+<div id="main">
+{% for post in site.guides %}
+    {% assign item = post %}
+    {% assign index = true %}
+    {% include _partial/article.html %}
+{% endfor %}
+</div>

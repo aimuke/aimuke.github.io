@@ -1,0 +1,19 @@
+{% assign current  = include.item %}
+<div class="content-item">
+    <div class="content-item-title level-{{ include.level }}">
+        {% if path == current.path %}
+        <a class="content-item-link current-chapter" href="{{current.path}}">{{ current.name }}</a>
+        {% else %}
+        <a class="content-item-link" href="{{current.path}}">{{ current.name }}</a>
+        {% endif %}
+    </div>
+    
+    {% if current.children and current.children | size != 0 %}
+    {% assign childLevel  = include.level | plus: 1 %}
+    <div class="content-item-child">
+        {% for child in current.children %}
+            {% include _partial/content_item.html item=child level=childLevel %}
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>

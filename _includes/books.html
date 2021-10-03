@@ -1,0 +1,17 @@
+{% assign item = page %}
+{% assign index = false %}
+{% assign table = true %}
+
+<div id="main">
+    {% for book in site.data.books %}
+    {% assign item = book[1] %}
+    <article class="post-expand post" itemprop="articleBody">
+        <header class="article-info clearfix">
+            <h1 itemprop="name">
+                <a href="{{ item.path }}" title="{{ item.name}}" tiemprop="url">{{ item.name }}</a>
+            </h1>
+        </header>
+    </article>
+    {% endfor %}
+
+</div>

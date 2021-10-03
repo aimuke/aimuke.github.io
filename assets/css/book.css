@@ -1,0 +1,37 @@
+.book {
+    background: white;
+}
+
+.content-wrap {
+    float: left;
+    margin-top: 2em;
+    padding-left: 20px;
+    width: 200px;
+    background: white;
+    min-height: 500px;
+    margin-right: 10px;
+}
+
+.content {
+
+}
+
+.content-item {
+}
+
+.content-item-link {
+
+}
+
+.content-item-title.level-1 {
+    font-weight: bold;
+}
+
+.current-chapter {
+    color: black;
+    font-weight: bold;
+}
+
+.content-item-child {
+    margin-left: 20px
+}

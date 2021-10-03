@@ -1,0 +1,124 @@
+{
+    "name": "git",
+    "path": "/books/git/repo-create",
+    "content": [
+        {
+            "name": "创建版本库",
+            "path": "/books/git/repo-create"
+        },
+        {
+            "name": "日常操作",
+            "path": "/books/git/commit",
+            "children": [
+                {
+                    "name": "修改与提交",
+                    "path": "/books/git/commit-modify"
+                },
+                {
+                    "name": "版本回退[reset]",
+                    "path": "/books/git/commit-reset"
+                },
+                {
+                    "name": "工作区与暂存区",
+                    "path": "/books/git/commit-concept"
+                },
+                {
+                    "name": "管理修改",
+                    "path": "/books/git/commit-add"
+                },
+                {
+                    "name": "撤销修改[checkout\reset]",
+                    "path": "/books/git/commit-cancel"
+                },
+                {
+                    "name": "删除文件[delete]",
+                    "path": "/books/git/commit-delete"
+                }
+            ]
+        },
+        {
+            "name": "远程仓库",
+            "path": "/books/git/remote",
+            "children": [
+                {
+                    "name": "添加远程仓库",
+                    "path": "/books/git/remote-add"
+                },
+                {
+                    "name": "从远程克隆",
+                    "path": "/books/git/remote-clone"
+                }
+            ]
+        },
+        {
+            "name": "分支管理",
+            "path": "/books/git/branch",
+            "children": [
+                {
+                    "name": "创建与合并分支",
+                    "path": "/books/git/branch-merge"
+                },
+                {
+                    "name": "解决冲突",
+                    "path": "/books/git/branch-conflict"
+                },
+                {
+                    "name": "分支管理策略",
+                    "path": "/books/git/branch-strategy"
+                },
+                {
+                    "name": "Bug分支",
+                    "path": "/books/git/branch-bug"
+                },
+                {
+                    "name": "Feature分支",
+                    "path": "/books/git/branch-feature"
+                },
+                {
+                    "name": "多人协作",
+                    "path": "/books/git/branch-cooperation"
+                },
+                {
+                    "name": "Rebase",
+                    "path": "/books/git/branch-rebase"
+                },
+                {
+                    "name": "Rebase 冲突",
+                    "path": "/books/git/branch-rebase-conflict"
+                }
+            ]
+        },
+        {
+            "name": "标签管理",
+            "path": "/books/git/tag",
+            "children": [
+                {
+                    "name": "创建标签",
+                    "path": "/books/git/tag-create"
+                },
+                {
+                    "name": "删除标签",
+                    "path": "/books/git/tag-delete"
+                },
+                {
+                    "name": "修改内容",
+                    "path": "/books/git/tag-checkout"
+                }
+            ]
+        },
+        {
+            "name": "自定义Git",
+            "path": "/books/git/custom",
+            "children": [
+                {
+                    "name": "忽略特殊文件",
+                    "path": "/books/git/custom-gitignore"
+                },
+                {
+                    "name": "配置别名",
+                    "path": "/books/git/custom-alias"
+                }
+            ]
+        }
+    ]
+}
