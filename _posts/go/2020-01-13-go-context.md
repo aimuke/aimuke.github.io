@@ -164,6 +164,13 @@ func watch(ctx context.Context, name string) {
 示例中启动了3个监控goroutine进行不断的监控，每一个都使用了 `Context` 进行跟踪，当我们使用 `cancel` 函数通知取消时，这3个goroutine都会被结束。这就是 `Context` 的控制能力，它就像一个控制器一样，按下开关后，所有基于这个 `Context` 或者衍生的子 `Context` 都会收到通知，这时就可以进行清理操作了，最终释放goroutine，这就优雅的解决了goroutine启动后不可控的问题。
 
 > 这里其实还看不出 `context` 相对与 `select + chan` 这种方式的优势来。待后续对 `context`这种方式有跟深入的了解后在添加相关的比较
+> 
+> 更复杂的场景如何做并发控制呢？比如子协程中开启了新的子协程，或者需要同时控制多个子协程。这种场景下，select+chan的方式就显得力不从心了。
+>
+> Go 语言提供了 Context 标准库可以解决这类场景的问题，Context 的作用和它的名字很像，上下文，即子协程的下上文。Context 有两个主要的功能：
+> 
+> - 通知子协程退出（正常退出，超时退出等）；
+> - 传递必要的参数。
 
 # Context定义
 
