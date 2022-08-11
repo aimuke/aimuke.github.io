@@ -4,11 +4,10 @@ tags: [http, timeout, tcp, connection, socket]
 list_number: n
 ---
 
-# Http 请求request分析
 
 如果你的 Nginx 服务器流量足够大，足够繁忙。可能你会在 Nginx 的 error log 中看到下面这样的日志：
 
-![Alt text](https://ms2008.github.io/img/in-post/nginx\_timeout.png)
+![Alt text](https://ms2008.github.io/img/in-post/nginx_timeout.png)
 
 如果你去仔细观察，会发现这两个的 timeout 似乎有些不太一样：
 
@@ -23,9 +22,11 @@ list_number: n
 
 我们知道在 TCP 的三次握手中，Client 发送 SYN，Server 收到之后回 SYN\_ACK，接着 Client 再回 ACK，这时 Client 便完成了 connect() 调用，进入 ESTAB 状态。如果 Client 发送 SYN 之后，由于网络原因或者其他问题没有收到 Server 的 SYN\_ACK，那么这时 Client 便会重传 SYN。重传的次数由内核参数 `net.ipv4.tcp_syn_retries` 控制，重传的间隔为 \[1,3,7,15,31]s 等。(有很多文章都说是 \[3,6,9]s 等，不过根据我的抓包分析，貌似不太符合，如下图)
 
-![Alt text](https://ms2008.github.io/img/in-post/syn\_retry.png)
+![Alt text](https://ms2008.github.io/img/in-post/syn_retry.png)
 
-**如果 Client 重传完所有 SYN 之后依然没有收到 SYN\_ACK，那么这时 connect() 调用便会抛出 connection timeout 错误。如果 Client 在重传 SYN 期间，Client 的 sock timeout 时间到了，那么这时 connect() 会抛出 timeout 错误。**
+- **如果 Client 重传完所有 SYN 之后依然没有收到 SYN\_ACK，那么这时 connect() 调用便会抛出 connection timeout 错误。**
+
+- **如果 Client 在重传 SYN 期间，Client 的 sock timeout 时间到了，那么这时 connect() 会抛出 timeout 错误。**
 
 ****
 
