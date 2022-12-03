@@ -1,6 +1,6 @@
 ---
 title: "Deployment的使用"
-tags: [k8s, crd, controller]
+tags: [k8s, deployment, replica set, pod]
 ---
 
 
