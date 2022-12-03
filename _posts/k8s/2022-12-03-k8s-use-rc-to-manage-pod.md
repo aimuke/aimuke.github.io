@@ -125,6 +125,6 @@ $ kubectl rolling-update rc-demo -f rc-demo.yaml
 
 
 
-## References
+# References
 
 * [原文 使用Replication Controller、Replica Set 管理Pod](https://www.qikqiak.com/k8s-book/docs/23.%E4%BD%BF%E7%94%A8RC%E7%AE%A1%E7%90%86Pod.html)
