@@ -149,7 +149,7 @@ su,istio-proxy,-c,/usr/local/bin/pilot-agent proxy \
 
 ```
 
-# ListenersConfigDump
+# ClustersConfigDump
 
 ```json
 {
